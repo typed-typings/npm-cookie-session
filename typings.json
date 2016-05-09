@@ -1,0 +1,9 @@
+{
+  "name": "cookie-session",
+  "main": "index.d.ts",
+  "version": "^2.0.0-alpha.1",
+  "homepage": "https://github.com/expressjs/cookie-session",
+  "ambientDependencies": {
+    "node": "registry:env/node#4.0.0+20160507210304"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "npm run lint && npm run build && npm run test-spec",
+    "test-spec": "ts-node test/index.ts",
+    "build": "typings bundle . --out bundle",
+    "lint": "tslint index.d.ts",
+    "prepublish": "typings install"
+  },
+  "devDependencies": {
+    "cookie-session": "^2.0.0-alpha.1",
+    "ts-node": "^0.7.2",
+    "tslint": "^3.7.4",
+    "tslint-config-typings": "^0.2.3",
+    "typescript": "^1.8.9",
+    "typings": "^0.8.1"
+  }
+}
