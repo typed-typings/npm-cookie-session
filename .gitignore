@@ -1,4 +1,4 @@
-bundle/
 node_modules/
 typings/
+bundle.d.ts
 .DS_Store

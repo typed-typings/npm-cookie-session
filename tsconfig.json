@@ -2,10 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "noImplicitAny": true
   },
   "files": [
     "index.d.ts",
-    "typings/main.d.ts"
+    "typings/index.d.ts"
   ]
 }

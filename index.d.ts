@@ -1,6 +1,6 @@
-import { ServerRequest, ServerResponse } from 'http';
+import { IncomingMessage, ServerResponse } from 'http';
 
-declare function cookieSession (options: cookieSession.Options): (req: ServerRequest, res: ServerResponse, next: (err: Error) => any) => void;
+declare function cookieSession (options: cookieSession.Options): (req: IncomingMessage, res: ServerResponse, next: (err: Error) => any) => void;
 
 declare namespace cookieSession {
   export interface Options {
