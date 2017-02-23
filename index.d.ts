@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http';
 
-declare function cookieSession (options: cookieSession.Options): (req: IncomingMessage, res: ServerResponse, next: (err: Error) => any) => void;
+declare function cookieSession (options: cookieSession.Options): (req: IncomingMessage, res: ServerResponse, next: (err?: Error) => void) => void;
 
 declare namespace cookieSession {
   export interface Options {
@@ -82,7 +82,13 @@ declare namespace cookieSession {
     isPopulated: boolean;
   }
 
-  export type Session <T> = void | (T & SessionData);
+  /**
+   * **Important**: The session signature has `null` because the setter allows 
+   * `null` to destroy the session (see https://github.com/expressjs/cookie-session#destroying-a-session).
+   * If you need to read the session, consider using the "non-null assertion operator" 
+   * (`req.session!.x`) until TypeScript can define different getters and setters.
+   */
+  export type Session <T extends object> = undefined | null | (T & SessionData);
 }
 
 
