@@ -1,5 +1,7 @@
 # Typed Cookie Session
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/types/npm-cookie-session.svg)](https://greenkeeper.io/)
+
 The type definition for [`cookie-session`](https://github.com/expressjs/cookie-session).
 
 ## Using Definition
